@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Κωνσταντινούπολη...όπως παλιά — Ζαχαροπλαστείο στη Θεσσαλονίκη. Παραδοσιακά γλυκά, φρέσκο ψωμί και αυθεντικές γεύσεις της Πόλης." />
+  <meta property="og:title" content="Κωνσταντινούπολη...όπως παλιά" />
+  <meta property="og:description" content="Αυθεντικά γλυκά και ψωμί στη Θεσσαλονίκη" />
+  <meta property="og:type" content="website" />
+  <title>Κωνσταντινούπολη...όπως παλιά | Ζαχαροπλαστείο Θεσσαλονίκης</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- HEADER: logo + hamburger only. No nav items inside. -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+
+      <a href="#hero" class="nav-logo" aria-label="Αρχική σελίδα">
+        <span class="logo-main">Κωνσταντινούπολη</span>
+        <span class="logo-sub">...όπως παλιά</span>
+      </a>
+
+      <button class="menu-btn" id="menu-btn"
+        aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- NAV: lives at body level, always position:fixed, never a flex child -->
+  <nav class="main-nav" id="main-nav" aria-label="Κύρια πλοήγηση" aria-hidden="true">
+    <ul>
+      <li><a href="#about">Η ιστορία μας</a></li>
+      <li><a href="#specialties">Ειδικότητες</a></li>
+      <li><a href="#menu">Μενού</a></li>
+      <li><a href="#gallery">Γκαλερί</a></li>
+      <li><a href="#reviews">Κριτικές</a></li>
+      <li><a href="#location">Βρείτε μας</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         1. HERO
+         Full-viewport, CSS Grid center,
+         parallax bg, overlay, animated text
+    ══════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Αρχική">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p class="hero-eyebrow reveal">Ζαχαροπλαστείο &middot; Θεσσαλονίκη</p>
+        <h1 class="hero-title reveal">
+          Κωνσταντινούπολη<br>
+          <em>...όπως παλιά</em>
+        </h1>
+        <p class="hero-subtitle reveal">
+          Αυθεντικές γεύσεις της Πόλης, φτιαγμένες με αγάπη<br>
+          από παραδοσιακές συνταγές γενεών
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#menu" class="btn btn-primary">Δείτε το μενού μας</a>
+          <a href="#location" class="btn btn-outline">Βρείτε μας</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         2. ABOUT
+         2-col flex (image left, text right),
+         decorative border frame + badge
+    ══════════════════════════════════════ -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-img-frame">
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700&q=80"
+              alt="Παραδοσιακά γλυκά στο ζαχαροπλαστείο"
+              width="700"
+              height="500"
+              loading="eager"
+            />
+            <div class="about-badge">
+              <span class="badge-number">4.8</span>
+              <span class="badge-stars" aria-label="5 αστέρια">★★★★★</span>
+              <span class="badge-label">Google Reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <span class="section-eyebrow">Η ιστορία μας</span>
+          <h2 class="section-title" id="about-heading">
+            Γεύσεις που ταξιδεύουν<br>από την Πόλη
+          </h2>
+          <p>
+            Η <strong>Κωνσταντινούπολη</strong> δεν είναι απλώς ένα ζαχαροπλαστείο — είναι ένα
+            ταξίδι στο χρόνο. Κάθε γλυκό που φτιάχνουμε φέρνει μαζί του τη μνήμη μιας πόλης
+            που έμεινε χαραγμένη στις καρδιές εκατομμυρίων Ελλήνων.
+          </p>
+          <p>
+            Χρησιμοποιούμε παραδοσιακές συνταγές που μεταφέρθηκαν από γενιά σε γενιά, με
+            φρέσκα υλικά και αγάπη για την τέχνη της ζαχαροπλαστικής. Από το αρωματικό
+            γαλακτομπούρεκο μέχρι το βελούδινο ρυζόγαλο — κάθε μπουκιά είναι μια ανάμνηση.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <strong>23+</strong>
+              <span>Κριτικές</span>
+            </div>
+            <div class="stat">
+              <strong>4.8★</strong>
+              <span>Βαθμολογία</span>
+            </div>
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Φρέσκα υλικά</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         3. SPECIALTIES
+         Surface bg, 3-col CSS Grid,
+         hover-lift cards
+    ══════════════════════════════════════ -->
+    <section class="specialties section" id="specialties" aria-labelledby="specialties-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Οι ειδικότητές μας</span>
+          <h2 class="section-title" id="specialties-heading">Αγαπημένες γεύσεις</h2>
+          <p class="section-desc">
+            Τα πιο αγαπημένα δημιουργήματά μας, φτιαγμένα με παραδοσιακές συνταγές
+          </p>
+        </header>
+
+        <div class="specialties-grid">
+
+          <article class="specialty-card reveal">
+            <div class="card-icon" aria-hidden="true">🥧</div>
+            <h3>Γαλακτομπούρεκο</h3>
+            <p>Τριαντάφυλλο κρέμας σε χρυσόφυλλο φύλλο, ποτισμένο με αρωματικό σιρόπι.</p>
+          </article>
+
+          <article class="specialty-card reveal">
+            <div class="card-icon" aria-hidden="true">🍮</div>
+            <h3>Ρυζόγαλο</h3>
+            <p>Βελούδινο ρυζόγαλο με άρωμα βανίλιας και γαλακτικής κρέμας, σαν αγκαλιά ζεστή.</p>
+          </article>
+
+          <article class="specialty-card reveal">
+            <div class="card-icon" aria-hidden="true">🍩</div>
+            <h3>Τουλουμπάκια</h3>
+            <p>Τραγανά τουλουμπάκια βυθισμένα σε μελάτο σιρόπι — η αδυναμία όλων μας.</p>
+          </article>
+
+          <article class="specialty-card reveal">
+            <div class="card-icon" aria-hidden="true">🍞</div>
+            <h3>Αρτοποιία</h3>
+            <p>Φρεσκοψημένο ψωμί κάθε μέρα, από παραδοσιακές συνταγές που μοσχοβολούν.</p>
+          </article>
+
+          <article class="specialty-card reveal">
+            <div class="card-icon" aria-hidden="true">🫓</div>
+            <h3>Μπακλαβάς</h3>
+            <p>Λεπτά φύλλα, αρωματικοί ξηροί καρποί και μέλι — η βασίλισσα των γλυκών.</p>
+          </article>
+
+          <article class="specialty-card reveal">
+            <div class="card-icon" aria-hidden="true">🧁</div>
+            <h3>Κανταΐφι</h3>
+            <p>Ζυμαρένια νήματα με κρέμα φιστικιού ή αμύγδαλο, καρυκευμένα με ανθόνερο.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         4. MENU
+         Tabbed interface (Γλυκά / Αρτοποιία /
+         Ροφήματα), 2-col menu grid
+    ══════════════════════════════════════ -->
+    <section class="menu-section section" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Το μενού μας</span>
+          <h2 class="section-title" id="menu-heading">Γεύσεις για κάθε στιγμή</h2>
+        </header>
+
+        <div class="menu-tabs reveal" role="tablist" aria-label="Κατηγορίες μενού">
+          <button class="tab-btn active" role="tab" data-tab="sweets"
+            aria-selected="true" aria-controls="tab-sweets" id="tab-btn-sweets">
+            Γλυκά
+          </button>
+          <button class="tab-btn" role="tab" data-tab="bakery"
+            aria-selected="false" aria-controls="tab-bakery" id="tab-btn-bakery">
+            Αρτοποιία
+          </button>
+          <button class="tab-btn" role="tab" data-tab="drinks"
+            aria-selected="false" aria-controls="tab-drinks" id="tab-btn-drinks">
+            Ροφήματα
+          </button>
+        </div>
+
+        <div class="menu-panels">
+
+          <div class="menu-panel active" id="tab-sweets" role="tabpanel" aria-labelledby="tab-btn-sweets">
+            <div class="menu-grid">
+              <div class="menu-item"><span class="menu-name">Γαλακτομπούρεκο</span><span class="menu-price">€3.50</span></div>
+              <div class="menu-item"><span class="menu-name">Ρυζόγαλο</span><span class="menu-price">€2.80</span></div>
+              <div class="menu-item"><span class="menu-name">Τουλουμπάκια (4τμχ)</span><span class="menu-price">€3.00</span></div>
+              <div class="menu-item"><span class="menu-name">Μπακλαβάς</span><span class="menu-price">€3.50</span></div>
+              <div class="menu-item"><span class="menu-name">Κανταΐφι</span><span class="menu-price">€3.50</span></div>
+              <div class="menu-item"><span class="menu-name">Κρέμα Κωνσταντινούπολης</span><span class="menu-price">€4.00</span></div>
+              <div class="menu-item"><span class="menu-name">Σάμαλι</span><span class="menu-price">€2.50</span></div>
+              <div class="menu-item"><span class="menu-name">Εκμέκ Κανταΐφι</span><span class="menu-price">€4.50</span></div>
+              <div class="menu-item"><span class="menu-name">Καζάν ντιμπί</span><span class="menu-price">€3.50</span></div>
+              <div class="menu-item"><span class="menu-name">Κρέμα τριαντάφυλλου</span><span class="menu-price">€4.00</span></div>
+            </div>
+          </div>
+
+          <div class="menu-panel" id="tab-bakery" role="tabpanel" aria-labelledby="tab-btn-bakery" hidden>
+            <div class="menu-grid">
+              <div class="menu-item"><span class="menu-name">Κουλούρι Θεσσαλονίκης</span><span class="menu-price">€0.80</span></div>
+              <div class="menu-item"><span class="menu-name">Τυρόπιτα</span><span class="menu-price">€2.50</span></div>
+              <div class="menu-item"><span class="menu-name">Σπανακόπιτα</span><span class="menu-price">€2.50</span></div>
+              <div class="menu-item"><span class="menu-name">Ψωμί σίκαλης</span><span class="menu-price">€3.00</span></div>
+              <div class="menu-item"><span class="menu-name">Κρουασάν βουτύρου</span><span class="menu-price">€2.20</span></div>
+              <div class="menu-item"><span class="menu-name">Σεμιδάλι</span><span class="menu-price">€2.00</span></div>
+            </div>
+          </div>
+
+          <div class="menu-panel" id="tab-drinks" role="tabpanel" aria-labelledby="tab-btn-drinks" hidden>
+            <div class="menu-grid">
+              <div class="menu-item"><span class="menu-name">Ελληνικός καφές</span><span class="menu-price">€2.00</span></div>
+              <div class="menu-item"><span class="menu-name">Καπουτσίνο</span><span class="menu-price">€3.50</span></div>
+              <div class="menu-item"><span class="menu-name">Σαλέπι</span><span class="menu-price">€3.00</span></div>
+              <div class="menu-item"><span class="menu-name">Φυσικοί χυμοί</span><span class="menu-price">€4.00</span></div>
+              <div class="menu-item"><span class="menu-name">Τσάι βοτάνων</span><span class="menu-price">€2.50</span></div>
+              <div class="menu-item"><span class="menu-name">Ζεστή σοκολάτα</span><span class="menu-price">€3.50</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         5. GALLERY
+         Dark bg, CSS Grid masonry-style,
+         caption reveal on hover
+    ══════════════════════════════════════ -->
+    <section class="gallery-section section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Γκαλερί</span>
+          <h2 class="section-title" id="gallery-heading">Μια ματιά στον κόσμο μας</h2>
+        </header>
+
+        <div class="gallery-grid reveal">
+          <figure class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500&q=80"
+              alt="Παραδοσιακά γλυκά" loading="lazy" width="500" height="520" />
+            <figcaption>Παραδοσιακά γλυκά</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=500&q=80"
+              alt="Φρέσκα pastries" loading="lazy" width="500" height="250" />
+            <figcaption>Φρέσκα pastries</figcaption>
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&q=80"
+              alt="Το κατάστημά μας" loading="lazy" width="500" height="520" />
+            <figcaption>Το κατάστημά μας</figcaption>
+          </figure>
+          <figure class="gallery-item wide">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+              alt="Αρτοποιία — φρέσκο ψωμί" loading="lazy" width="700" height="250" />
+            <figcaption>Αρτοποιία — φρέσκο ψωμί</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=500&q=80"
+              alt="Μπακλαβάς" loading="lazy" width="500" height="250" />
+            <figcaption>Μπακλαβάς</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         6. REVIEWS
+         Surface bg, 3-col card grid,
+         Google rating summary + testimonials
+    ══════════════════════════════════════ -->
+    <section class="reviews-section section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-eyebrow reveal">Κριτικές πελατών</span>
+          <h2 class="section-title reveal" id="reviews-heading">Τι λένε οι επισκέπτες μας</h2>
+          <div class="overall-rating reveal" aria-label="Συνολική βαθμολογία 4.8 από 5 αστέρια">
+            <span class="rating-number">4.8</span>
+            <div class="rating-stars" aria-hidden="true">★★★★★</div>
+            <span class="rating-count">23 αξιολογήσεις στο Google</span>
+          </div>
+        </header>
+
+        <div class="reviews-grid">
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#8b1a00" aria-hidden="true">D</div>
+              <div class="reviewer-info">
+                <strong>dodoka Didi</strong>
+                <span>Τοπικός οδηγός &middot; 50 κριτικές &middot; 8 φωτογραφίες</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Το καλύτερο ψωμί και τα καλύτερα γλυκά! Όλοι ευγενέστατοι, τέλεια εξυπηρέτηση —
+              επιτέλους άνοιξε ένα διαμαντάκι στην γειτονιά μας!»
+            </blockquote>
+            <time datetime="2024-11">Πριν από 3 εβδομάδες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#2c5f2e" aria-hidden="true">E</div>
+              <div class="reviewer-info">
+                <strong>Elda Hamz</strong>
+                <span>12 κριτικές</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Το πιο ωραίο ζαχαροπλαστείο στην Θεσσαλονίκη! Μπράβο παιδιά
+              να συνεχίσετε έτσι να μας γλυκάνετε την ζωή με τα γλυκά σας! Καλές δουλειές και υγεία!»
+            </blockquote>
+            <time datetime="2024-09">Πριν από 3 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#785424" aria-hidden="true">L</div>
+              <div class="reviewer-info">
+                <strong>lina sal</strong>
+                <span>Τοπικός οδηγός &middot; 275 κριτικές &middot; 27 φωτογραφίες</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Πολύ ωραίο μαγαζί με φρέσκα γλυκά σε μεγάλη ποικιλία και γεύσεις.
+              Καταπληκτικό ψωμί και ωραίες προτάσεις για πρωινό. Ένα μαγαζί στολίδι
+              που έλειπε από την γειτονιά μας!»
+            </blockquote>
+            <time datetime="2024-09">Πριν από 3 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#1a3a6b" aria-hidden="true">D</div>
+              <div class="reviewer-info">
+                <strong>dimitris karagiozidis</strong>
+                <span>Τοπικός οδηγός &middot; 10 κριτικές &middot; 21 φωτογραφίες</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Ποιότητα, ποικιλία, αρώματα και γεύσεις που δεν βρίσκεις αλλού.
+              Εξυπηρέτηση, ευγένεια και χαμόγελο που τα συνοδεύουν. Αξεπέραστα όλα.»
+            </blockquote>
+            <time datetime="2024-09">Πριν από 3 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#5a1a6b" aria-hidden="true">H</div>
+              <div class="reviewer-info">
+                <strong>heyjude</strong>
+                <span>Τοπικός οδηγός &middot; 16 κριτικές &middot; 2 φωτογραφίες</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Απίστευτη ποιότητα και εξυπηρέτηση! Συνιστώ το γαλακτομπούρεκο
+              και την κρέμα τριαντάφυλλου με γλυκό του κουταλιού τριαντάφυλλο.»
+            </blockquote>
+            <time datetime="2024-09">Πριν από 3 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#6b3a1a" aria-hidden="true">E</div>
+              <div class="reviewer-info">
+                <strong>Eleni Neny</strong>
+                <span>Τοπικός οδηγός &middot; 98 κριτικές &middot; 23 φωτογραφίες</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Ένα μοντέρνο μέρος με άρωμα άλλης εποχής από την Πόλη.
+              Όλα θυμίζουν συνταγές γιαγιάς με γεύσεις όπως παλιά! Μπράβο!»
+            </blockquote>
+            <time datetime="2024-08">Πριν από 4 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#1a5a4a" aria-hidden="true">V</div>
+              <div class="reviewer-info">
+                <strong>Vasiliki Ts</strong>
+                <span>5 κριτικές</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Νέο μαγαζί με φρέσκα προϊόντα, νόστιμα γλυκά και προσωπικό
+              που σε περιποιείται πάντα με χαμόγελο!»
+            </blockquote>
+            <time datetime="2024-09">Πριν από 3 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#7a3a20" aria-hidden="true">B</div>
+              <div class="reviewer-info">
+                <strong>Bill Arabatzis</strong>
+                <span>8 κριτικές</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Η φρεσκάδα σ' όλο της το μεγαλείο. Μπράβο παιδιά, καλές δουλειές!»
+            </blockquote>
+            <time datetime="2024-10">Πριν από 2 μήνες</time>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-header">
+              <div class="reviewer-avatar" style="background:#2a4a2a" aria-hidden="true">A</div>
+              <div class="reviewer-info">
+                <strong>Akis Sadexis</strong>
+                <span>Τοπικός οδηγός &middot; 803 κριτικές</span>
+              </div>
+              <div class="review-stars" aria-label="5 αστέρια">★★★★★</div>
+            </div>
+            <blockquote>
+              «Σήμερα το είδα και πήρα εκμέκ κανταΐφι και καζάν ντιμπί —
+              καλές δουλειές!»
+            </blockquote>
+            <time datetime="2024-09">Πριν από 3 μήνες</time>
+          </article>
+
+        </div>
+
+        <div class="reviews-cta reveal">
+          <a
+            href="https://maps.app.goo.gl/RBhPagPLsc8L1px49"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Δείτε όλες τις κριτικές στο Google
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         7. EXPERIENCE / ATMOSPHERE
+         Full-width parallax bg section,
+         centered text overlay
+    ══════════════════════════════════════ -->
+    <section class="experience-section" id="experience" aria-labelledby="experience-heading">
+      <div class="experience-overlay" aria-hidden="true"></div>
+      <div class="container experience-content reveal">
+        <span class="section-eyebrow light">Η εμπειρία</span>
+        <h2 class="section-title light" id="experience-heading">
+          Ένα μέρος που μυρίζει<br>παράδοση
+        </h2>
+        <p>
+          Κάθε πρωί τα αρώματα φρεσκοψημένου ψωμιού και ζεστής κρέμας γεμίζουν τη γειτονιά.
+          Ελάτε να ζήσετε την εμπειρία ενός αληθινού ζαχαροπλαστείου της Πόλης.
+        </p>
+        <a href="#location" class="btn btn-primary">Ελάτε να μας βρείτε</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         8. HOURS & CONTACT
+         2-col grid of white cards:
+         hours table + contact details
+    ══════════════════════════════════════ -->
+    <section class="hours-section section" id="hours" aria-labelledby="hours-heading">
+      <div class="container hours-grid">
+
+        <div class="hours-card reveal">
+          <h2 class="section-title" id="hours-heading">Ωράριο λειτουργίας</h2>
+          <table class="hours-table">
+            <tbody>
+              <tr>
+                <th scope="row">Δευτέρα – Παρασκευή</th>
+                <td>07:00 – 21:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Σάββατο</th>
+                <td>07:00 – 21:00</td>
+              </tr>
+              <tr>
+                <th scope="row">Κυριακή</th>
+                <td>08:00 – 20:00</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="hours-note">★ Τα φρέσκα γλυκά φτάνουν κάθε πρωί νωρίς!</p>
+        </div>
+
+        <div class="contact-card reveal">
+          <h2 class="section-title">Επικοινωνία</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <a
+                href="https://maps.app.goo.gl/RBhPagPLsc8L1px49"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Μακεδονίας 11<br>Θεσσαλονίκη 546 42
+              </a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">📞</span>
+              <a href="tel:+302312002073">231 200 2073</a>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">⭐</span>
+              <a
+                href="https://maps.app.goo.gl/RBhPagPLsc8L1px49"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Αξιολογήστε μας στο Google
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         9. LOCATION / MAP
+         Full-width Google Maps embed
+         with rounded card wrapper
+    ══════════════════════════════════════ -->
+    <section class="location-section section" id="location" aria-labelledby="location-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-eyebrow">Βρείτε μας</span>
+          <h2 class="section-title" id="location-heading">Μακεδονίας <span class="num">11</span>, Θεσσαλονίκη</h2>
+        </header>
+
+        <div class="map-wrapper reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014!2d22.9528973!3d40.6118064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a839be2ed2cc6b%3A0x1ece31c84e9aeb3c!2s%CE%9A%CF%89%CE%BD%CF%83%CF%84%CE%B1%CE%BD%CF%84%CE%B9%CE%BD%CE%BF%CF%8D%CF%80%CE%BF%CE%BB%CE%B7...%CF%8C%CF%80%CF%89%CF%82%20%CF%80%CE%B1%CE%BB%CE%B9%CE%AC!5e0!3m2!1sel!2sgr!4v1709000000000!5m2!1sel!2sgr"
+            width="100%"
+            height="480"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Χάρτης — Κωνσταντινούπολη...όπως παλιά, Μακεδονίας 11 Θεσσαλονίκη"
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       10. FOOTER
+       Dark bg, 3-col grid:
+       brand / nav links / contact
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <span class="logo-main">Κωνσταντινούπολη</span>
+        <span class="logo-sub">...όπως παλιά</span>
+        <p>Αυθεντικές γεύσεις της Πόλης στη Θεσσαλονίκη.<br>Μακεδονίας 11 · 231 200 2073</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Πλοήγηση footer">
+        <h4>Πλοήγηση</h4>
+        <ul role="list">
+          <li><a href="#about">Η ιστορία μας</a></li>
+          <li><a href="#specialties">Ειδικότητες</a></li>
+          <li><a href="#menu">Μενού</a></li>
+          <li><a href="#gallery">Γκαλερί</a></li>
+          <li><a href="#reviews">Κριτικές</a></li>
+          <li><a href="#location">Βρείτε μας</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h4>Επικοινωνία</h4>
+        <address>
+          <p>Μακεδονίας 11<br>Θεσσαλονίκη 546 42</p>
+          <p><a href="tel:+302312002073">231 200 2073</a></p>
+          <p>Δευτ–Παρ: 07:00–21:00<br>Κυριακή: 08:00–20:00</p>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Κωνσταντινούπολη...όπως παλιά. Όλα τα δικαιώματα διατηρούνται.</p>
+    </div>
+  </footer>
+
+  <!-- type="module" is required: Vite's dev server uses ES modules -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
