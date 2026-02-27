@@ -2,5 +2,5 @@
 // Example: base: '/konstantinoupoli/'
 // Leave as './' for root deployments (custom domain or user/org page).
 export default {
-  base: './',
+  base: '/konstantinople/',
 }
